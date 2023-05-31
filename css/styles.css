@@ -12,6 +12,14 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+/* code below to be removed at a later time */
+
+.placeholder-image {
+    width: 90vw;
+}
+
+/* code above to be removed at a later time */
+
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
@@ -46,6 +54,15 @@ nav {
         "header header"
         "nav main";
     }
+
+    /* code below to be removed at a later time */
+
+    .daily-traffic img,
+    .mobile-users img {
+        width: 40vw;
+    }
+
+    /* code above to be removed at a later time */
     
     .main {
         grid-template-columns: 50%;
