@@ -51,6 +51,7 @@
                 <div class="widget-container-full">
                 <!-- element that line graph will attach to -->
                     <canvas id="traffic-chart"></canvas>
+                    <img src="images/graph-placeholder.PNG">
                 </div>
             </div>
         </section>
@@ -60,6 +61,7 @@
             <div class="widget-container-half">
                 <!-- element that bar graph will attach to -->
                 <canvas id="daily-traffic-chart"></canvas>
+                <img src="images/graph-placeholder.PNG">
             </div>
         </section>
         <!-- mobile users section -->
@@ -68,6 +70,7 @@
             <div class="widget-container-half">
                 <!-- element that doughnut graph will attach to -->
                 <canvas id="mobile-users-chart"></canvas>
+                <img src="images/graph-placeholder.PNG">
             </div>
         </section>
         <!-- social stats section -->
@@ -149,48 +152,56 @@
             <div class="recent-container">
                 <img src="images/member-1.jpg" alt="Victoria Chambers" class="profile-img">
                 <div class="recent-text">
-                    <p>Victoria Chambers</p>
-                    <a href="#">dale.byrd52@example.com</a>
+                    <p>Victoria Chambers commented on <strong>WebApp's SEO Tips</strong></p>
                 </div>
-                <p>12/10/22</p>
+                <p>4 Hours Ago</p>
             </div>
             <div class="recent-container">
                 <img src="images/member-2.jpg" alt="Dale Byrd" class="profile-img">
                 <div class="recent-text">
-                    <p>Dale Byrd</p>
-                    <a href="#">dale.byrd52@example.com</a>
+                    <p>Dale Byrd liked the post <strong>Facebook's Proposed Changes for 2024</strong></p>
                 </div>
-                <p>12/10/22</p>
+                <p>5 Hours Ago</p>
             </div>
             <div class="recent-container">
-                <img src="images/member-2.jpg" alt="Dale Byrd" class="profile-img">
+                <img src="images/member-3.jpg" alt="Dawn Wood" class="profile-img">
                 <div class="recent-text">
-                    <p>Dale Byrd</p>
-                    <a href="#">dale.byrd52@example.com</a>
+                    <p>Dawn Wood commented on <strong>Facebook's Proposed Changes for 2024</strong></p>
                 </div>
-                <p>12/10/22</p>
+                <p>5 Hours Ago</p>
             </div>
             <div class="recent-container">
-                <img src="images/member-2.jpg" alt="Dale Byrd" class="profile-img">
+                <img src="images/member-4.jpg" alt="Dan Oliver" class="profile-img">
                 <div class="recent-text">
-                    <p>Dale Byrd</p>
-                    <a href="#">dale.byrd52@example.com</a>
+                    <p>Dan Oliver posted <strong>WebApp's SEO Tips</strong></p>
                 </div>
-                <p>12/10/22</p>
+                <p>1 Day Ago</p>
             </div>
         </section>
         <!-- message user section -->
         <section class="message-user">
             <h3 class="section-header">Message User</h3>
-            <form>
-                <input type="text" placeholder="Search for user">
-                <textarea placeholder="Message to user"></textarea>
-                <button id="send">Send</button>
+            <form class="widget-container-full">
+                <input type="text" placeholder="Search for user" class="form-field" id="userField">
+                <textarea placeholder="Message to user" class="form-area" id="messageField"></textarea>
+                <button class="button-primary" id="send">Send</button>
             </form>
         </section>
         <!-- settings section -->
         <section class="settings">
             <h3 class="section-header">Settings</h3>
+            <!-- toggle switches -->
+            <select class="form-field" id="timezone">
+                <option disabled selected>Select a timezone</option>
+                <option>Eastern</option>
+                <option>Central</option>
+                <option>Mountain</option>
+                <option>Pacific</option>
+            </select>
+            <div class="settings-button">
+                <button class="button-primary" id="save">Save</button>
+                <button class="button-disabled" id="cancel">Cancel</button>
+            </div>
         </section>
     </main>
     
