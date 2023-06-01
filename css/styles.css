@@ -1,6 +1,6 @@
 * { 
-    margin:0; 
-    padding:0;
+    margin: 0; 
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -11,14 +11,6 @@
 body {
     font-family: 'Quicksand', sans-serif;
 }
-
-/* code below to be removed at a later time */
-
-.placeholder-image {
-    width: 90vw;
-}
-
-/* code above to be removed at a later time */
 
 .grid-container {
     display: grid;
@@ -47,6 +39,10 @@ nav {
     width: 95vw;
 }
 
+/*  =================================================
+                    MEDIA QUERIES
+    =================================================   */
+
 @media (min-width: 768px) {
     .grid-container {
         grid-template-columns: 55px 1fr;
@@ -54,29 +50,25 @@ nav {
         "header header"
         "nav main";
     }
-
-    /* code below to be removed at a later time */
-
-    .daily-traffic img,
-    .mobile-users img {
-        width: 40vw;
-    }
-
-    /* code above to be removed at a later time */
     
     .main {
         grid-template-columns: 50%;
     }
 
-    .traffic, .social-stats {
+    .traffic,
+    .social-stats {
         grid-column: 1 / span 2;
     }
 
-    .daily-traffic, .new-members, .message-user {
+    .daily-traffic, 
+    .new-members,
+    .message-user {
         grid-column: 1 / span 1;
     }
 
-    .mobile-users, .recent-activity, .settings {
+    .mobile-users,
+    .recent-activity,
+    .settings {
         grid-column: 2 / span 1;
     }
 
@@ -88,6 +80,20 @@ nav {
         width: 45vw;
     }
 }
+
+@media (min-width: 1024px) {
+    
+
+
+}
+
+
+
+
+
+
+
+
 
 /* main {
     width: 320px;

@@ -1,3 +1,7 @@
+// =================================================
+//                     ALERT
+// =================================================   
+
 const alertBanner = document.getElementById('alert');
 
 alertBanner.innerHTML = `
@@ -7,12 +11,16 @@ alertBanner.innerHTML = `
     </div>
 `;
 
-alertBanner.addEventListener('click', e => {
+alertBanner.addEventListener('click', (e) => {
     const element = e.target;
     if (element.classList.contains('alert-banner-close')) {
         alertBanner.style.display = 'none';
     }
 })
+
+// =================================================
+//                 TRAFFIC CHART
+// ================================================= 
 
 const trafficCanvas = document.getElementById('traffic-chart');
 
@@ -51,10 +59,11 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions
 });
 
+// =================================================
+//               DAILY TRAFFIC CHART
+// ================================================= 
 
-
-
-const dailyCanvas = document.getElementById('daily-chart');
+const dailyCanvas = document.getElementById('daily-traffic-chart');
 
 const dailyData = {
     labels: ['S', 'M', 'T', 'W', 'TH', 'F', 'S'],
@@ -85,10 +94,11 @@ let dailyChart = new Chart(dailyCanvas, {
     options: dailyOptions
 });
 
+// =================================================
+//               MOBILE USERS CHART
+// ================================================= 
 
-
-
-const mobileCanvas = document.getElementById('mobile-chart');
+const mobileCanvas = document.getElementById('mobile-users-chart');
 
 const mobileData = {
     labels: ['Desktop', 'Tablet', 'Phones'],
@@ -123,7 +133,9 @@ let mobileChart = new Chart(mobileCanvas, {
     options: mobileOptions
 });
 
-// Messaging Section
+// =================================================
+//                  MESSAGE FORM
+// ================================================= 
 
 const user = document.getElementById('userField');
 const message = document.getElementById('messageField');
