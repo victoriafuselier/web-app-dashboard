@@ -15,7 +15,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
         "header"
@@ -88,28 +88,27 @@ main {
     display: grid;
 }
 
-.widget-container-full, .widget-container-half {
-    width: 90vw;
-}
+/* .widget-container-full, .widget-container-half {
+    width: 80vw;
+} */
 
 h2 {
     margin: 10px;
 }
 
-.alert {
+.alert-banner {
     border-radius: 10px;
     background-color: var(--primary-color);
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     color: white;
-    padding: 5px 10px;
+    padding: 10px 5px;
+    font-size: .75rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
 
-.alert-banner-close {
-    position: relative;
-    top: -5px;
-    right: -5px;
-}
 .traffic-header ul {
     display: flex;
     flex-direction: row;
@@ -158,7 +157,7 @@ section {
 }
 
 .profile-img {
-    width: 20vw;
+    width: 20%;
 }
 
 .form-field,
