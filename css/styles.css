@@ -24,7 +24,7 @@ body {
 }
 
 header {
-    grid-area: 'header';
+    grid-area: header;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -78,13 +78,13 @@ h1 strong {
 }
 
 nav {
-    grid-area: 'nav';
+    grid-area: nav;
     background-color: var(--secondary-color);
     height: 25vh;
 }
 
 main {
-    grid-area: 'main';
+    grid-area: main;
     display: grid;
 }
 
