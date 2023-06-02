@@ -68,6 +68,8 @@ h1 strong {
 
 #member-img {
     height: 15vh;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 #member-name {
