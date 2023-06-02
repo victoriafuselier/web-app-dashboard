@@ -11,6 +11,7 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
+    width: 100%;
 }
 
 .grid-container {
@@ -88,9 +89,9 @@ main {
     display: grid;
 }
 
-/* .widget-container-full, .widget-container-half {
+.widget-container-full, .widget-container-half {
     width: 80vw;
-} */
+}
 
 h2 {
     margin: 10px;
