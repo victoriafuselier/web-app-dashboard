@@ -139,6 +139,26 @@ section {
     flex-direction: row;
 }
 
+.members-container,
+.recent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+
+.members-text,
+.recent-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-img {
+    width: 20vw;
+}
+
 .form-field,
 .form-area {
     background-color: whitesmoke;
@@ -160,6 +180,10 @@ form {
     padding: 10px;
     text-transform: uppercase;
     border-style: none;
+}
+
+.settings-buttons {
+    margin: 10px auto;
 }
 
 
