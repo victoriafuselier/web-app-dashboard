@@ -105,7 +105,8 @@ h1 strong {
     font-weight: 500;
 }
 
-.members-container a {
+.members-container a,
+.recent-container a {
     text-decoration: none;
     color: var(--primary-color);
 }
@@ -372,6 +373,10 @@ form {
 
     .social-stats-container {
         width: 30%;
+    }
+
+    .profile-img {
+        width: revert;
     }
 }
 
