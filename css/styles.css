@@ -41,6 +41,11 @@ header {
     margin-bottom: 20px;
 }
 
+.dashboard {
+    text-align: left;
+    padding-left: 20px;
+}
+
 .dashboard,
 .tab {
     width: 50%;
@@ -95,8 +100,8 @@ h1 strong {
 }
 
 #member-name {
-    font-size: .7rem;
-    font-weight: 100;
+    font-size: .9rem;
+    font-weight: 500;
 }
 
 nav {
@@ -126,6 +131,8 @@ main {
 
 h2 {
     margin: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
 .alert-banner {
