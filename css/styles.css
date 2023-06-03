@@ -325,7 +325,7 @@ form {
         "nav main";
     }
     
-    .main {
+    main {
         grid-template-columns: 50%;
     }
 
