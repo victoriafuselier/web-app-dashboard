@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../normalize.css">
+    <link rel="stylesheet" href="css/toggle-switch.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>WebApp Dashboard</title>
 </head>
@@ -208,6 +209,26 @@
             <h3 class="section-header">Settings</h3>
             <div id="settings-content">
             <!-- toggle switches -->
+                <div class="toggle-div">
+                    <label class="switch-light switch-candy toggle-switch" onclick="">
+                        <input type="checkbox">
+                            <strong>Send Email Notifications</strong>
+                        <span>
+                            <span></span>
+                            <span>On</span>
+                            <a></a>
+                        </span>
+                    </label>
+                    <label class="switch-light switch-candy toggle-switch" onclick="">
+                        <input type="checkbox">
+                            <strong>Set Profile to Public</strong>
+                        <span>
+                            <span></span>
+                            <span>On</span>
+                            <a></a>
+                        </span>
+                    </label>
+                </div>
                 <select class="form-field" id="timezone">
                     <option disabled selected>Select timezone</option>
                     <option>Eastern</option>

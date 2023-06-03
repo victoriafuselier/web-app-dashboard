@@ -139,8 +139,12 @@ main {
     margin: 0 auto;
 }
 
+canvas {
+    margin: 0 auto;
+} 
+
 h2 {
-    margin: 10px 5px;
+    margin: 15px 5px;
     font-weight: 600;
     font-size: 1.1rem;
 }
@@ -280,6 +284,20 @@ form {
     padding: 10px;
     text-transform: uppercase;
     border-style: none;
+}
+
+.toggle-switch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.toggle-div label {
+    font-size: 1rem;
+}
+
+.toggle-div {
+    margin: 20px 0;
 }
 
 .settings-buttons {
