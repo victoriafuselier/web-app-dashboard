@@ -32,7 +32,9 @@
     <main>
         <!-- dashboard header -->
         <div class="main-header">
-            <h2>Dashboard</h2>
+            <div class="dashboard">
+                <h2>Dashboard</h2>
+            </div>
             <div class="tab"></div>
         </div>
         <!-- alert banner -->
@@ -187,14 +189,16 @@
         <!-- settings section -->
         <section class="settings">
             <h3 class="section-header">Settings</h3>
+            <div id="settings-content">
             <!-- toggle switches -->
-            <select class="form-field" id="timezone">
-                <option disabled selected>Select timezone</option>
-                <option>Eastern</option>
-                <option>Central</option>
-                <option>Mountain</option>
-                <option>Pacific</option>
-            </select>
+                <select class="form-field" id="timezone">
+                    <option disabled selected>Select timezone</option>
+                    <option>Eastern</option>
+                    <option>Central</option>
+                    <option>Mountain</option>
+                    <option>Pacific</option>
+                </select>
+            </div>
             <div class="settings-buttons">
                 <button class="button-primary" id="save">Save</button>
                 <button class="button-disabled" id="cancel">Cancel</button>
