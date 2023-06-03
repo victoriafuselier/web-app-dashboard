@@ -192,7 +192,7 @@
         <!-- message user section -->
         <section class="message-user">
             <h3 class="section-header">Message User</h3>
-            <form class="widget-container-full">
+            <form id="message-form" class="widget-container-full">
                 <input type="text" placeholder="Search for user" class="form-field" id="userField">
                 <textarea placeholder="Message to user" class="form-area" id="messageField" style="height: 150px"></textarea>
                 <button class="button-primary" id="send">Send</button>
@@ -203,28 +203,32 @@
             <h3 class="section-header">Settings</h3>
             <div id="settings-content">
             <!-- toggle switches -->
-                <div class="toggle-div">
-                    <label class="switch-light switch-candy toggle-switch" onclick="">
-                        <input type="checkbox">
-                            <strong>Send Email Notifications</strong>
-                        <span>
-                            <span></span>
-                            <span>On</span>
-                            <a></a>
-                        </span>
-                    </label>
-                    <label class="switch-light switch-candy toggle-switch" onclick="">
-                        <input type="checkbox">
-                            <strong>Set Profile to Public</strong>
-                        <span>
-                            <span></span>
-                            <span>On</span>
-                            <a></a>
-                        </span>
-                    </label>
+                <div class="toggles">
+                    <div class="toggle-div">
+                        <label class="switch-light switch-material switch-candy toggle-switch-container" onclick="">
+                            <input type="checkbox">
+                                <strong>Send Email Notifications</strong>
+                            <span>
+                                <span></span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="toggle-div">
+                        <label class="switch-light switch-material switch-candy toggle-switch-container" onclick="">
+                            <input type="checkbox">
+                                <strong>Set Profile to Public</strong>
+                            <span>
+                                <span></span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
                 </div>
                 <select class="form-field" id="timezone">
-                    <option disabled selected>Select timezone</option>
+                    <option disabled selected>Select Timezone</option>
                     <option>Eastern</option>
                     <option>Central</option>
                     <option>Mountain</option>

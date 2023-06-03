@@ -139,11 +139,10 @@ main {
 .widget-container-full, .widget-container-half {
     width: 90vw;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-canvas {
-    margin: 0 auto;
-} 
 
 h2 {
     margin: 15px 5px;
@@ -245,6 +244,7 @@ section {
     margin-bottom: 20px;
     border-radius: 5px;
     padding: 10px;
+    width: 90%;
 }
 
 form {
@@ -254,23 +254,27 @@ form {
 }
 
 #send {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
 }
 
 #timezone {
-    width: 90%;
+    width: 85%;
+    margin: 10px auto;
+    color: grey;
 }
 
-.toggle-div span {
-    width: 30%;
-}
-
-/* #settings-content {
+.toggle-switch-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-} */
+}
+
+.toggle-div strong {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
 
 .button-primary {
     background-color: var(--primary-color);
@@ -290,20 +294,6 @@ form {
     border-style: none;
 }
 
-/* .toggle-switch {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.toggle-div label {
-    font-size: 1rem;
-}
-
-.toggle-div {
-    margin: 20px 0;
-} */
-
 .settings-buttons {
     margin: 10px auto;
     display: flex;
@@ -314,6 +304,11 @@ form {
 
 .settings-buttons button {
     width: 40%;
+}
+
+#settings-content {
+    display: flex;
+    flex-direction: column;
 }
 
 
