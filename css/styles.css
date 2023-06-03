@@ -200,13 +200,11 @@ section {
     border: 1px solid lightgrey;
 }
 
-.social-stats-image svg {
-    height: 100%;
+.social-svg {
+    height: 20vh;
     fill: white;
-}
-
-.social-stats-image svg rect {
-    fill: var(--primary-color);
+    border-radius: 50%;
+    background-color: var(--primary-color);
 }
 
 .stats-number {
