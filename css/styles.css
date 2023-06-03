@@ -190,7 +190,7 @@ section {
 .social-stats-container {
     background-color: whitesmoke;
     padding: 30px 10px;
-    margin: 10px 0px;
+    margin: 10px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -212,6 +212,12 @@ section {
 .stats-number {
     font-size: 2.3rem;
     color: var(--neutal-dark);
+}
+
+.social-stats-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .social-stats-text p {
@@ -373,6 +379,7 @@ form {
 
     .social-stats-container {
         width: 30%;
+        padding: 20px 10px;
     }
 
     .profile-img {
