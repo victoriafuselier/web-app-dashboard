@@ -166,10 +166,29 @@ section {
 
 .social-stats-container {
     background-color: whitesmoke;
-    padding: 10px;
-    margin: 10px auto;
+    padding: 30px 10px;
+    margin: 10px 0px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+}
+
+.social-stats-image svg {
+    height: 100%;
+    fill: white;
+}
+
+.social-stats-image svg rect {
+    fill: var(--primary-color);
+}
+
+.stats-number {
+    font-size: 2rem;
+    color: grey;
+}
+
+.social-stats-text p {
+    font-weight: bold;
 }
 
 .members-container,
