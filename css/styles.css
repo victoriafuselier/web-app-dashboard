@@ -363,6 +363,16 @@ form {
     nav svg {
         margin: 20px;
     }
+
+    .social-stats-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .social-stats-container {
+        width: 30%;
+    }
 }
 
 @media (min-width: 1024px) {
