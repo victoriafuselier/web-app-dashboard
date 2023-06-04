@@ -153,3 +153,21 @@ send.addEventListener('click', () => {
         alert(`Message successfully sent to: ${user.value}`);
     }
 });
+
+// =================================================
+//                RESPONSIVE RESIZING
+// ================================================= 
+
+function beforePrintHandler () {
+    for (let id in Chart.instances) {
+        Chart.instances[id].resize();
+    }
+}
+ 
+window.addEventListener('beforeprint', () => {
+    myChart.resize(600, 600);
+  });
+  window.addEventListener('afterprint', () => {
+    myChart.resize();
+  });
+   
