@@ -299,11 +299,15 @@ form {
     justify-content: flex-start;
 }
 
+.toggles {
+    width: 100%;
+}
+
 .button-primary {
     background-color: var(--primary-color);
     border-radius: 5px;
     color: white;
-    padding: 10px;
+    padding: 15px;
     text-transform: uppercase;
     border-style: none;
 }
@@ -312,7 +316,7 @@ form {
     background-color: var(--neutral-dark);
     border-radius: 5px;
     color: white;
-    padding: 10px;
+    padding: 15px;
     text-transform: uppercase;
     border-style: none;
 }
@@ -326,7 +330,7 @@ form {
 }
 
 .settings-buttons, #send {
-    margin: 20px 0px 10px;
+    margin: 15px 0px 10px;
 }
 
 .settings-buttons button {
