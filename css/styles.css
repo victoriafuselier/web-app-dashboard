@@ -34,7 +34,7 @@ header {
     align-items: center;
     background-color: var(--primary-color);
     color: white;
-    height: 20vh;
+    height: 80px;
     padding: 15px;
 }
 
@@ -67,7 +67,7 @@ header {
 
 h1 {
     font-weight: 100;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-right: auto;
 }
 
@@ -77,14 +77,14 @@ h1 strong {
 
 #bell-icon {
     fill: white;
-    height: 5vh;
+    height: 20px;
 }
 
 #bell-div {
     border-right: solid white .5px;
     padding-right: 10px;
     margin-right: 10px;
-    height: 10vh;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,10 +93,11 @@ h1 strong {
 .profile-img {
     border-radius: 50%;
     margin-right: 10px;
+    width: 70px;
 }
 
 #member-img {
-    height: 10vh;
+    height: 40px;
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -120,7 +121,7 @@ h1 strong {
 nav {
     grid-area: nav;
     background-color: var(--secondary-color);
-    height: 15vh;
+    height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -128,7 +129,7 @@ nav {
 }
 
 nav svg {
-    height: 8vh;
+    height: 30px;
     fill: white;
 }
 
@@ -147,10 +148,7 @@ main {
     margin: 10px auto;
     align-items: center;
     flex-direction: row;
-}
-
-canvas {
-    margin: 0 auto;
+    justify-content: center
 }
 
 h2 {
@@ -166,7 +164,7 @@ h2 {
     margin: 10px auto;
     color: white;
     padding: 10px 20px;
-    font-size: .75rem;
+    font-size: .8rem;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -216,7 +214,7 @@ section {
 }
 
 .social-svg {
-    height: 20vh;
+    height: 70px;
     fill: white;
     border-radius: 50%;
     background-color: var(--primary-color);
@@ -243,7 +241,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 20px 10px 15px;
 }
 
 .members-text,
@@ -255,10 +253,6 @@ section {
     font-weight: 500;
     margin-top: 10px;
     font-size: .75rem;
-}
-
-.profile-img {
-    width: 25%;
 }
 
 .form-field,
@@ -330,7 +324,7 @@ form {
 }
 
 .settings-buttons button {
-    width: 48%;
+    width: 49%;
 }
 
 #settings-content {
@@ -367,8 +361,46 @@ form {
         grid-column: 1 / span 2;
     }
 
+    .dashboard {
+        width: 30%;
+    }
+
+    .tab {
+        width: 70%;
+    }
+
+    header {
+        padding: 15px 45px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #bell-icon {
+        height: 30px;
+    }
+
+    #member-img {
+        height: 50px;
+    }
+
+    #member-name {
+        font-size: 1.2rem;
+    }
+
     .alert-banner {
         margin: 20px auto;
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .traffic-header ul {
+        width: 30%;
+    }
+
+    .traffic-nav-links {
+        font-size: 1rem;
     }
 
     .daily-traffic {
@@ -389,10 +421,12 @@ form {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        padding-top: 15px;
+        align-items: center;
     }
 
     nav svg {
-        margin: 20px;
+        margin: 20px 0px;
     }
 
     .social-stats-row {
@@ -426,11 +460,6 @@ form {
         margin-right: auto;
         text-align: left;
     }
-
-    .profile-img {
-        width: 15%;
-    }
-
     .settings-buttons button {
         width: 45%;
     }
@@ -438,8 +467,27 @@ form {
 }
 
 @media (min-width: 1024px) {
+
+    .grid-container {
+        grid-template-columns: 90px 1fr;
+    }
+
     main {
         grid-template-columns: 50% 50%;
+    }
+
+    .dashboard {
+        width: 15%;
+    }
+
+    .tab {
+        width: 85%;
+    }
+
+
+    .alert-banner {
+        width: 50%;
+        font-size: 1.3rem;
     }
 
     .recent-activity,
@@ -459,10 +507,16 @@ form {
         width: 90%;
         height: 80%;
         justify-content: space-between;
+        margin: 0px auto;
+    }
+
+    .settings-buttons, 
+    #send {
+        margin-bottom: 0px;
     }
 
     .settings-buttons {
-        margin-bottom: 0px;
+        margin-top: 0;
     }
 
     .members-content,
@@ -474,4 +528,16 @@ form {
     .recent-container {
         height: 100px;
     }
+
+    .toggles {
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+/* 
+    #member-img {
+        height: 8vh;
+    } */
 }
