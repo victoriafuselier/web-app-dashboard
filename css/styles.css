@@ -239,6 +239,7 @@ section {
     align-items: center;
     text-align: center;
     font-weight: 500;
+    margin-top: 10px;
 }
 
 .profile-img {
@@ -407,15 +408,13 @@ form {
         justify-content: flex-start;
     }
 
-    .members-text {
-        margin-right: auto;
-        text-align: left;
-    }
-
     .recent-text,
     .members-text {
         flex-direction: column;
         align-items: flex-start;
+        margin-top: revert;
+        margin-right: auto;
+        text-align: left;
     }
 
     .recent-activity {
