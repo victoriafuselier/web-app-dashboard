@@ -448,4 +448,9 @@ form {
     .message-user {
         grid-column: 1 / span 1;
     }
+
+    #message-form,
+    .settings-content {
+        width: 90%;
+    }
 }
