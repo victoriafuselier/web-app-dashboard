@@ -174,7 +174,8 @@ h2 {
 }
 
 .traffic-nav-links {
-    font-size: .75rem;
+    font-size: 1rem;
+    margin: 10px;
 }
 
 /* .traffic-nav-links:active {
@@ -198,7 +199,8 @@ section {
 
 .social-stats-container,
 .form-area,
-#timezone {
+#timezone,
+.form-field {
     border: 1px solid var(--neutral-light);
 }
 
@@ -259,7 +261,6 @@ section {
 form {
     display: flex;
     flex-direction: column;
-    width: 90%;
 }
 
 #send {
