@@ -138,7 +138,7 @@ main {
 }
 
 .widget-container-full, .widget-container-half {
-    width: 90vw;
+    width: 85vw;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -252,7 +252,7 @@ section {
     margin-bottom: 20px;
     border-radius: 5px;
     padding: 10px;
-    width: 90%;
+    width: 100%;
 }
 
 form {
@@ -262,7 +262,7 @@ form {
 }
 
 #send {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -311,10 +311,11 @@ form {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin: 20px 0px;
 }
 
 .settings-buttons button {
-    width: 45%;
+    width: 48%;
 }
 
 #settings-content {
@@ -363,10 +364,6 @@ form {
     .mobile-users {
         grid-column: 2 / span 1;
         border-left: solid rgba(0, 0, 0, 0.193) .5px;
-    }
-
-    .widget-container-full {
-        width: 80vw;
     }
 
     .widget-container-half {
