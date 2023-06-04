@@ -450,7 +450,13 @@ form {
     }
 
     #message-form,
-    .settings-content {
+    #settings-content {
         width: 90%;
+        height: 80%;
+        justify-content: space-between;
+    }
+
+    .settings-buttons {
+        margin-bottom: 0px;
     }
 }
