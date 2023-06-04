@@ -184,7 +184,7 @@ h2 {
 
 section {
     border-bottom: solid rgba(0, 0, 0, 0.193) .5px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .social-stats-container {
@@ -349,6 +349,8 @@ form {
     }
 
     .main-header,
+    .alert,
+    .alert-banner,
     .traffic,
     .social-stats,
     .new-members,
@@ -356,6 +358,10 @@ form {
     .message-user,
     .settings {
         grid-column: 1 / span 2;
+    }
+
+    .alert-banner {
+        margin: 20px auto;
     }
 
     .daily-traffic {
@@ -422,7 +428,7 @@ form {
     }
 
     .profile-img {
-        width: 15%;
+        width: 10%;
     }
 
     .settings-buttons button {
