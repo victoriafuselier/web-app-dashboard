@@ -40,7 +40,7 @@ header {
 .main-header {
     display: flex;
     flex-direction: row;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .dashboard {
@@ -60,7 +60,7 @@ header {
 
 .section-header {
     text-transform: uppercase;
-    margin: 0px 5px 20px;
+    margin: 10px 10px 20px;
     font-size: 1rem;
 }
 
@@ -155,7 +155,7 @@ h2 {
     border-radius: 10px;
     background-color: var(--primary-color);
     width: 90%;
-    margin: 0 auto;
+    margin: 10px auto;
     color: white;
     padding: 10px 5px;
     font-size: .75rem;
@@ -184,7 +184,7 @@ h2 {
 
 section {
     border-bottom: solid rgba(0, 0, 0, 0.193) .5px;
-    padding: 20px 10px;
+    padding: 10px;
 }
 
 .social-stats-container {
@@ -198,7 +198,7 @@ section {
 
 .social-stats-container,
 .form-area,
-.form-field {
+#timezone {
     border: 1px solid var(--neutral-light);
 }
 
@@ -246,7 +246,8 @@ section {
 }
 
 .form-field,
-.form-area {
+.form-area,
+#timezone {
     background-color: whitesmoke;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -266,20 +267,24 @@ form {
 }
 
 #timezone {
-    width: 85%;
-    margin: 10px auto;
     color: grey;
 }
 
 .toggle-switch-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .toggle-div strong {
-    margin: 15px;
+    margin: 15px 15px 15px 5px;
+}
+
+.toggle-div {
+    font-size: .9rem;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .button-primary {
@@ -301,25 +306,27 @@ form {
 }
 
 .settings-buttons {
-    margin: 10px auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 95%;
+    width: 100%;
 }
 
 .settings-buttons button {
-    width: 40%;
+    width: 45%;
 }
 
 #settings-content {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
 }
 
-.toggles {
-    width: 50%;
+#timezone {
+    width: 100%;
+    margin: 10px 0px;
 }
 
 
@@ -420,15 +427,6 @@ form {
 
     .profile-img {
         width: 15%;
-    }
-
-    .toggle-switch-container {
-        justify-content: flex-start;
-    }
-
-    #timezone {
-        margin: 10px 12px;
-        width: 95%;
     }
 
     .settings-buttons button {
