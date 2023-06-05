@@ -59,10 +59,35 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions
 });
 
-// adding new code below to attempt traffic widget link function
+const hourlyData = [383, 939, 1039, 333, 290, 1200, 782, 983, 200, 123, 432, 211];
+const dailyData = [102, 899, 765, 678, 897, 711, 345];
+const weeklyData = [1230, 3453, 2499, 1483, 3235, 2003, 4287, 1239, 3236, 4981];
+const monthlyData = [9382, 3982, 8173, 7365, 9037, 8014, 9038, 3092, 5162, 3837, 6049, 7980]
+
 
 const trafficNav = document.getElementById('traffic-nav');
 const trafficLinks = trafficNav.querySelectorAll('.traffic-nav-links');
+
+const updateTrafficChart = (labelToDisplay, dataToDisplay) => {
+    // Set labels depending on what labels parameter is passed in from event listener
+    if (labelToDisplay === 'hourly') {
+        // Set hourly labels
+        trafficData.labels = ['7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00'];
+    } else if (labelToDisplay === 'daily') {
+        // Set daily labels
+        trafficData.labels = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
+    } else if (labelToDisplay === 'weekly') {
+        // Set weekly labels
+        trafficData.labels = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '25-31'];
+    } else if (labelToDisplay === 'monthly') {
+        // Set monthly labels
+        trafficData.labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    }
+    // Set data depending on what datasets parameter is passed in from event listener
+    trafficData.datasets[0].data = dataToDisplay;
+    // Update traffic chart with new labels and data
+    trafficChart.update();
+};
 
 const toggleClass = (element, arr, state) => {
     // For each item in the array that is passed in..
@@ -83,6 +108,20 @@ trafficNav.addEventListener('click', (e) => {
         let clickedLink = e.target;
         // If it is, add active state class to clicked li element
         toggleClass(clickedLink, trafficLinks, 'active');
+        // If the hourly link is clicked..
+        if (clickedLink.textContent === 'Hourly') {
+            // ..then run function to update chart to display hourly data
+            updateTrafficChart('hourly', hourlyData);
+        } else if (clickedLink.textContent === 'Daily') {
+            // ..then run function to update chart to display daily data
+            updateTrafficChart('daily', dailyData);
+        } else if (clickedLink.textContent === 'Weekly') {
+            // ..then run function to update chart to display weekly data
+            updateTrafficChart('weekly', weeklyData);
+        } else if (clickedLink.textContent === 'Monthly') {
+            // ..then run function to update chart to display daily data
+            updateTrafficChart('daily', monthlyData);
+        }
     }
 });
 
@@ -92,7 +131,7 @@ trafficNav.addEventListener('click', (e) => {
 
 const dailyCanvas = document.getElementById('daily-traffic-chart');
 
-const dailyData = {
+const dailyTrafficData = {
     labels: ['S', 'M', 'T', 'W', 'TH', 'F', 'S'],
     datasets: [{
         label: '# of Hits',
@@ -102,7 +141,7 @@ const dailyData = {
     }]
 };
 
-const dailyOptions = {
+const dailyTrafficOptions = {
     scales: {
         y: {
             beginAtZero: true
@@ -117,8 +156,8 @@ const dailyOptions = {
 
 let dailyChart = new Chart(dailyCanvas, {
     type: 'bar',
-    data: dailyData,
-    options: dailyOptions
+    data: dailyTrafficData,
+    options: dailyTrafficOptions
 });
 
 // =================================================
