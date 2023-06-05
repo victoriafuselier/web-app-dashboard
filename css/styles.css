@@ -61,7 +61,7 @@ header {
 
 .section-header {
     text-transform: uppercase;
-    margin: 10px 0px 20px 3px;
+    margin: 10px 0px 20px 10px;
     font-size: 1rem;
 }
 
@@ -180,7 +180,7 @@ h2 {
 }
 
 .traffic-nav-links {
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 500;
     margin: 5px 0px;
     border-radius: 50%;
@@ -252,7 +252,7 @@ section {
     text-align: center;
     font-weight: 500;
     margin-top: 10px;
-    font-size: .75rem;
+    font-size: 1rem;
 }
 
 .form-field,
@@ -386,8 +386,10 @@ form {
     }
 
     #member-name {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
+
+
 
     .alert-banner {
         margin: 20px auto;
@@ -400,7 +402,7 @@ form {
     }
 
     .traffic-nav-links {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .daily-traffic {
@@ -459,9 +461,23 @@ form {
         margin-top: revert;
         margin-right: auto;
         text-align: left;
+        font-size: 1rem;
     }
     .settings-buttons button {
         width: 45%;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .section-header {
+        font-size: 1.2rem;
+        margin-left: 25px;
     }
 
 }
@@ -477,17 +493,20 @@ form {
     }
 
     .dashboard {
-        width: 15%;
+        width: 20%;
     }
 
     .tab {
-        width: 85%;
+        width: 80%;
     }
 
+    #traffic-container {
+        width: 70vw;
+    }
 
     .alert-banner {
         width: 50%;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .recent-activity,
@@ -500,6 +519,10 @@ form {
     .new-members,
     .message-user {
         grid-column: 1 / span 1;
+    }
+
+    #member-name {
+        font-size: 1.3rem;
     }
 
     #message-form,
@@ -533,11 +556,30 @@ form {
         margin-top: 10px;
     }
 
-    h1 {
-        font-size: 1.75rem;
+    .toggle-div {
+        font-size: 1rem;
     }
-/* 
-    #member-img {
-        height: 8vh;
-    } */
+
+    .toggle-div strong {
+        margin: 20px 10px 20px 4px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-header {
+        font-size: 1.4rem;
+        margin-left: 25px;
+    }
+
+    .traffic-nav-links {
+        font-size: 1.3rem;
+    }
+
+
 }
