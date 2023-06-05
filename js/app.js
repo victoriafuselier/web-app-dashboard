@@ -175,12 +175,6 @@ window.addEventListener('beforeprint', () => {
 //              SEARCH BAR AUTOCOMPLETE
 // =================================================  
 
-// let searchBar = document.querySelector('#userField');
-// let searchInput = searchBar.value;
-// searchBar.addEventListener('keydown', (e) => {
-//     if (searchInput === )
-// });
-
 const namesList = [
     'Victoria Chambers',
     'Dale Byrd',
