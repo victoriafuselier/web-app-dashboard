@@ -340,3 +340,100 @@ function autocomplete(inp, arr) {
         closeAllLists(e.target);
     });
 }
+
+// =================================================
+//                  SAVE SETTINGS
+// =================================================  
+
+const saveButton = document.getElementById('save');
+const cancelButton = document.getElementById('cancel');
+const emailCheckbox = document.getElementById('email-checkbox');
+const profileCheckbox = document.getElementById('profile-checkbox');
+const timezoneSelect = document.getElementById('timezone');
+
+
+const saveSettings = settings => {
+    if (settings === 'email') {
+        if (emailCheckbox.checked) {
+            localStorage.setItem('Email Notifications', 'on');
+        } else {
+            localStorage.setItem('Email Notifications', 'off');
+        }
+    }
+    if (settings === 'profile') {
+        if (profileCheckbox.checked) {
+            localStorage.setItem('Public Profile', 'on');
+        } else {
+            localStorage.setItem('Public Profile', 'off');
+        }
+    }
+    if (settings === 'timezone') {
+        let selectedTimezone = timezoneSelect[timezoneSelect.selectedIndex];
+        if (selectedTimezone.textContent === 'Eastern') {
+            localStorage.setItem('Timezone', 'Eastern');
+        } else if (selectedTimezone.textContent === 'Central') {
+            localStorage.setItem('Timezone', 'Central');
+        } else if (selectedTimezone.textContent === 'Mountain') {
+            localStorage.setItem('Timezone', 'Mountain');
+        } else if (selectedTimezone.textContent === 'Pacific') {
+            localStorage.setItem('Timezone', 'Pacific');
+        }
+    }
+    // reminder to add alert here 'settings successfully saved'
+};
+
+saveButton.addEventListener('click', () => {
+    saveSettings('email');
+    saveSettings('profile');
+    saveSettings('timezone');
+});
+
+cancelButton.addEventListener('click', () => {
+    if (emailCheckbox.checked) {
+        emailCheckbox.checked = false;
+    }
+    if (profileCheckbox.checked) {
+        profileCheckbox.checked = false;
+    }
+    if (timezoneSelect.selectedIndex > '0') {
+        timezoneSelect.selectedIndex = '0';
+    }
+    localStorage.clear();
+});
+
+// Store function that displays saved settings on load
+const addSavedSettings = () => {
+    // Get email setting from local storage
+    let emailPreference = localStorage.getItem('Email Notifications');
+    // If setting is saved as 'on'....
+    if (emailPreference === 'on') {
+        // ..then load checkbox as checked
+        emailCheckbox.checked = true;
+    // OR if setting is saved as 'off'..
+    } else if (emailPreference === 'off'){
+        // ..then load checkbox as unchecked
+        emailCheckbox.checked = false;
+    }
+    // Repeat if else statement above for public profile setting
+    let profilePreference = localStorage.getItem('Public Profile');
+    if (profilePreference === 'on') {
+        profileCheckbox.checked = true;
+    } else if (profilePreference === 'off') {
+        profileCheckbox.checked = false;
+    }
+    // Repeat if else statement above for timezone setting..
+    // Need to set selected option via select index
+    let timezonePreference = localStorage.getItem('Timezone');
+    if (timezonePreference === 'Eastern') {
+        timezoneSelect.selectedIndex = '1';
+    } else if (timezonePreference === 'Central') {
+        timezoneSelect.selectedIndex = '2';
+    } else if (timezonePreference === 'Mountain') {
+        timezoneSelect.selectedIndex = '3';
+    } else if (timezonePreference === 'Pacific') {
+        timezoneSelect.selectedIndex = '4';
+    }
+};
+
+// Run function to display saved settings upon loading page
+addSavedSettings();
