@@ -59,6 +59,33 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions
 });
 
+// adding new code below to attempt traffic widget link function
+
+const trafficNav = document.getElementById('traffic-nav');
+const trafficLinks = trafficNav.querySelectorAll('.traffic-nav-links');
+
+const toggleClass = (element, arr, state) => {
+    // For each item in the array that is passed in..
+    for (let i = 0; i < arr.length; i++) {
+        // ..check if that array item contains the class--or state--and if so..
+        if (arr[i].classList.contains(state)) {
+        // ..remove the class or state from that item..
+            arr[i].classList.remove(state);
+        }
+    }
+    // Add the class--or state--to the element passed in
+    element.classList.add(state);
+};
+
+trafficNav.addEventListener('click', (e) => {
+    // Check if clicked element is an li element
+    if (e.target.tagName === 'LI') {
+        let clickedLink = e.target;
+        // If it is, add active state class to clicked li element
+        toggleClass(clickedLink, trafficLinks, 'active');
+    }
+});
+
 // =================================================
 //               DAILY TRAFFIC CHART
 // ================================================= 
