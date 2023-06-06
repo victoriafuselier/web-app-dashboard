@@ -351,15 +351,22 @@ const emailCheckbox = document.getElementById('email-checkbox');
 const profileCheckbox = document.getElementById('profile-checkbox');
 const timezoneSelect = document.getElementById('timezone');
 
-
+// Define saveSettings function and save to var saveSettings
+// Function accepts a settings parameter to save info based on which of the 3 settings options are passed in
 const saveSettings = settings => {
+    // If settings parameter 'email' is passed in...
     if (settings === 'email') {
+        // ..check is email checkbox is checked..
         if (emailCheckbox.checked) {
+            // ..and if so, set email setting to on in local storage. 
             localStorage.setItem('Email Notifications', 'on');
+        // Otherwise.. 
         } else {
+            // ..set email setting to off in local storage.
             localStorage.setItem('Email Notifications', 'off');
         }
     }
+    // Repeat block of code above to save 'profile' setting to local storage
     if (settings === 'profile') {
         if (profileCheckbox.checked) {
             localStorage.setItem('Public Profile', 'on');
@@ -367,10 +374,15 @@ const saveSettings = settings => {
             localStorage.setItem('Public Profile', 'off');
         }
     }
+    // If timezone settings parameter is passed in..
     if (settings === 'timezone') {
+        // ..set var to store the timezone determined by the select index..
         let selectedTimezone = timezoneSelect[timezoneSelect.selectedIndex];
+        // ..and if the select index's text matches Eastern..
         if (selectedTimezone.textContent === 'Eastern') {
+            // ..set timezone setting to Eastern in local storage.
             localStorage.setItem('Timezone', 'Eastern');
+            // Otherwise, repeat above code for other select options.
         } else if (selectedTimezone.textContent === 'Central') {
             localStorage.setItem('Timezone', 'Central');
         } else if (selectedTimezone.textContent === 'Mountain') {
@@ -379,25 +391,33 @@ const saveSettings = settings => {
             localStorage.setItem('Timezone', 'Pacific');
         }
     }
-    // reminder to add alert here 'settings successfully saved'
 };
 
+// Event listener to run saveSettings function for all 3 settings option when save button is clicked
 saveButton.addEventListener('click', () => {
+    // Run saveSettings function for all 3 settings parameters
     saveSettings('email');
     saveSettings('profile');
     saveSettings('timezone');
+    // Alert the user to notify that settings have been saved
+    alert('Settings succesfully saved!');
 });
 
+// Event listener to cancel/erase memory of any settings previously entered or saved when cancel button is clicked
 cancelButton.addEventListener('click', () => {
+    // If email setting checkbox is not already in default 'off' position, switch to off
     if (emailCheckbox.checked) {
         emailCheckbox.checked = false;
     }
+    // If public profile setting checkbox is not already in default 'off' position, switch to off
     if (profileCheckbox.checked) {
         profileCheckbox.checked = false;
     }
+    // If timezone setting select input is not already in default 'off' position, switch to off
     if (timezoneSelect.selectedIndex > '0') {
         timezoneSelect.selectedIndex = '0';
     }
+    // Clear any previously saved settings from local storage
     localStorage.clear();
 });
 
