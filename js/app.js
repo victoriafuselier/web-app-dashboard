@@ -5,8 +5,8 @@
 const alertBanner = document.getElementById('alert');
 
 alertBanner.innerHTML = `
-    <div class = 'alert-banner'>
-        <p class= 'alert-banner-close'>x</p>
+    <div class='alert-banner'>
+        <p class='alert-banner-close'>x</p>
         <p class='alert-banner-msg'><strong>Alert:</strong> You have <strong>6</strong> unread messages</p>
     </div>
 `;
@@ -16,7 +16,40 @@ alertBanner.addEventListener('click', (e) => {
     if (element.classList.contains('alert-banner-close')) {
         alertBanner.style.display = 'none';
     }
-})
+});
+
+// =================================================
+//                   NOTIFICATIONS
+// =================================================   
+
+const notificationsBell = document.getElementById('bell-icon');
+const notificationDiv = document.getElementById('notification');
+const notificationBanner = document.getElementById('notification');
+
+notificationsBell.addEventListener('click', () => {
+    notificationDiv.innerHTML = `
+        <div class='notifications-banner'>
+            <div class='notifications-text'>
+                <h3 id='notifications-title'>Notifications</h3>
+                <div class='notifications'>
+                    <p><strong>New message</strong> from <strong>Dawn Wood</strong></p>
+                    <p>10th Annual Crawfish Boil Sat 1:00 PM</p>
+                    <p>Quarterly meeting 8/5/23 9:30 AM</p>
+                </div>
+            </div>
+            <div>
+                <p class='notifications-banner-close'>x</p>
+            </div>
+        </div>
+    `;
+});
+
+notificationDiv.addEventListener('click', (e) => {
+    const element = e.target;
+    if (element.classList.contains('notifications-banner-close')) {
+        notificationDiv.style.display = 'none';
+    };
+});
 
 // =================================================
 //                 TRAFFIC CHART
