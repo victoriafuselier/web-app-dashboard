@@ -27,6 +27,36 @@ body {
         "main";
 }
 
+main {
+    grid-area: main;
+    display: grid;
+}
+
+.widget-container-full, .widget-container-half {
+    width: 90vw;
+    display: flex;
+    margin: 10px auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center
+}
+
+section {
+    border-bottom: solid rgba(0, 0, 0, 0.193) .5px;
+    padding: 10px;
+}
+
+.social-stats-container,
+.form-area,
+#timezone,
+.form-field {
+    border: 1px solid var(--neutral-light);
+}
+
+/*  =================================================
+                        HEADER
+    =================================================   */
+
 header {
     grid-area: header;
     display: flex;
@@ -36,33 +66,6 @@ header {
     color: white;
     height: 80px;
     padding: 15px;
-}
-
-.main-header {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-}
-
-.dashboard {
-    text-align: center;
-    width: 40%;
-}
-
-.tab {
-    width: 60%;
-}
-
-.tab {
-    background-color: whitesmoke;
-    border-bottom: solid var(--neutral-light) 1px;
-    border-left: solid var(--neutral-light) 1px;
-}
-
-.section-header {
-    text-transform: uppercase;
-    margin: 10px 0px 20px 10px;
-    font-size: 1rem;
 }
 
 h1 {
@@ -90,22 +93,91 @@ h1 strong {
     align-items: center;
 }
 
-.profile-img {
-    border-radius: 50%;
-    margin-right: 10px;
-    width: 70px;
-}
-
-#member-img {
+#header-img {
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
 }
 
-#member-name {
+#header-name {
     font-size: .9rem;
     font-weight: 500;
 }
+
+/*  =================================================
+                    MAIN HEADER AND TAB
+    =================================================   */
+
+.main-header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.dashboard {
+    text-align: center;
+    width: 40%;
+}
+
+h2 {
+    margin: 15px 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.tab {
+    background-color: whitesmoke;
+    border-bottom: solid var(--neutral-light) 1px;
+    border-left: solid var(--neutral-light) 1px;
+    width: 60%;
+}
+
+.section-header {
+    text-transform: uppercase;
+    margin: 10px 0px 20px 10px;
+    font-size: 1rem;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 70px;
+}
+
+
+/*  =================================================
+                ALERT & NOTIFICATIONS
+    =================================================   */
+
+    .alert-banner,
+    .notifications-banner {
+        border-radius: 5px;
+        background-color: var(--primary-color);
+        width: 90%;
+        margin: 10px auto;
+        color: white;
+        padding: 10px 20px;
+        font-size: .8rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    
+    .notifications-banner {
+        flex-direction: row;
+        padding: 10px 20px 15px;
+    }
+    
+    #notifications-title {
+        margin-bottom: 10px;
+    }
+    
+    #bell-icon:hover {
+        fill: yellow;
+    }
+
+/*  =================================================
+                MEMBERS & RECENT SECTIONS
+    =================================================   */
 
 .members-container a,
 .recent-container a {
@@ -117,6 +189,40 @@ h1 strong {
 .recent-container:not(:last-child) {
     border-bottom: .5px solid var(--neutral-light);
 }
+
+.members-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px 15px;
+}
+
+.members-text,
+.recent-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.recent-container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px 15px;
+}
+
+.recent-arrow {
+    display: none;
+}
+
+/*  =================================================
+                    NAVIGATION
+    =================================================   */
 
 nav {
     grid-area: nav;
@@ -133,55 +239,12 @@ nav svg {
     fill: white;
 }
 
-main {
-    grid-area: main;
-    display: grid;
-}
+/*  =================================================
+                        TRAFFIC
+    =================================================   */
 
 .traffic {
     padding-top: 0px;
-}
-
-.widget-container-full, .widget-container-half {
-    width: 90vw;
-    display: flex;
-    margin: 10px auto;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center
-}
-
-h2 {
-    margin: 15px 5px;
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-.alert-banner,
-.notifications-banner {
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    width: 90%;
-    margin: 10px auto;
-    color: white;
-    padding: 10px 20px;
-    font-size: .8rem;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-
-.notifications-banner {
-    flex-direction: row;
-    padding: 10px 20px 15px;
-}
-
-#notifications-title {
-    margin-bottom: 10px;
-}
-
-#bell-icon:hover {
-    fill: yellow;
 }
 
 .traffic-header ul {
@@ -206,10 +269,9 @@ h2 {
     color: white;
 }
 
-section {
-    border-bottom: solid rgba(0, 0, 0, 0.193) .5px;
-    padding: 10px;
-}
+/*  =================================================
+                    SOCIAL STATS
+    =================================================   */
 
 .social-stats-container {
     background-color: whitesmoke;
@@ -218,13 +280,6 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
-
-.social-stats-container,
-.form-area,
-#timezone,
-.form-field {
-    border: 1px solid var(--neutral-light);
 }
 
 .social-svg {
@@ -250,24 +305,9 @@ section {
     color: var(--neutral-dark);
 }
 
-.members-container,
-.recent-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 10px 15px;
-}
-
-.members-text,
-.recent-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-weight: 500;
-    margin-top: 10px;
-    font-size: 1rem;
-}
+/*  =================================================
+                    MESSAGE FORM
+    =================================================   */
 
 .form-field,
 .form-area,
@@ -289,6 +329,10 @@ form {
     width: 100%;
     margin: 0 auto;
 }
+
+/*  =================================================
+                    SETTINGS SECTION
+    =================================================   */
 
 .toggle-switch-container {
     display: flex;
@@ -407,7 +451,7 @@ form {
     .main-header,
     .alert,
     .alert-banner,
-    .notification,
+    .notifications,
     .notifications-banner,
     .traffic,
     .social-stats,
@@ -438,11 +482,11 @@ form {
         height: 30px;
     }
 
-    #member-img {
+    #header-img {
         height: 50px;
     }
 
-    #member-name {
+    #header-name {
         font-size: 1.1rem;
     }
 
@@ -504,13 +548,36 @@ form {
         font-size: 2.1rem;
     }
 
-    .members-container,
-    .recent-container {
+    .members-container {
         flex-direction: row;
         justify-content: space-around;
     }
 
-    .recent-text,
+    .recent-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .recent-container-2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+    }
+
+    .recent-arrow {
+        display: inline-block;
+    }
+
+    .profile-img {
+        margin-right: 10px;
+    }
+
+    .recent-text {
+        align-items: flex-start;
+        margin-top: 0;
+    }
     .members-text {
         flex-direction: column;
         align-items: flex-start;
@@ -519,6 +586,7 @@ form {
         text-align: left;
         font-size: 1rem;
     }
+
     .settings-buttons button {
         width: 45%;
     }
@@ -607,6 +675,11 @@ form {
     .members-container, 
     .recent-container {
         height: 100px;
+    }
+
+    .recent-text {
+        text-align: left;
+        margin-right: 10px;
     }
 
     .toggles {

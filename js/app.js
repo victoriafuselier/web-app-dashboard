@@ -32,9 +32,18 @@ notificationsBell.addEventListener('click', () => {
             <div class='notifications-text'>
                 <h3 id='notifications-title'>Notifications</h3>
                 <div class='notifications'>
-                    <p><strong>New message</strong> from <strong>Dawn Wood</strong></p>
-                    <p>10th Annual Crawfish Boil Sat 1:00 PM</p>
-                    <p>Quarterly meeting 8/5/23 9:30 AM</p>
+                    <div>
+                        <p>10th Annual Crawfish Boil Sat 1:00 PM</p>
+                        <p class='dismiss-notification'>Dismiss</p>
+                    </div>
+                    <div>
+                        <p>Quarterly meeting 8/5/23 9:30 AM</p>
+                        <p class='dismiss-notification'>Dismiss</p>
+                    </div>
+                    <div>
+                        <p>10th Annual Crawfish Boil Sat 1:00 PM</p>
+                        <p class='dismiss-notification'>Dismiss</p>
+                    </div>
                 </div>
             </div>
             <div>
