@@ -444,7 +444,8 @@ form {
     display: inline-block;
 }
 
-#switch-text {
+#switch-text,
+#switch-text-2 {
     color: white;
     bottom: -4px;
     font-size: .75rem;
