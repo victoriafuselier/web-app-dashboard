@@ -14,7 +14,7 @@ alertBanner.innerHTML = `
 alertBanner.addEventListener('click', (e) => {
     const element = e.target;
     if (element.classList.contains('alert-banner-close')) {
-        alertBanner.style.display = 'none';
+        alertBanner.classList.add('hide');
     }
 });
 
@@ -24,40 +24,28 @@ alertBanner.addEventListener('click', (e) => {
 
 const notificationsBell = document.getElementById('bell-icon');
 const notificationDiv = document.getElementById('notification');
-const notificationBanner = document.getElementById('notification');
+const notificationBanner = document.querySelector('.notifications-banner');
 
 notificationsBell.addEventListener('click', () => {
-    notificationDiv.innerHTML = `
-        <div class='notifications-banner'>
-            <div class='notifications-text'>
-                <h3 id='notifications-title'>Notifications</h3>
-                <div class='notifications'>
-                    <div>
-                        <p>10th Annual Crawfish Boil Sat 1:00 PM</p>
-                        <p class='dismiss-notification'>Dismiss</p>
-                    </div>
-                    <div>
-                        <p>Quarterly meeting 8/5/23 9:30 AM</p>
-                        <p class='dismiss-notification'>Dismiss</p>
-                    </div>
-                    <div>
-                        <p>10th Annual Crawfish Boil Sat 1:00 PM</p>
-                        <p class='dismiss-notification'>Dismiss</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <p class='notifications-banner-close'>x</p>
-            </div>
-        </div>
-    `;
+    if (notificationBanner.classList.contains('hide')) {
+        notificationBanner.classList.remove('hide');
+    } else {
+        notificationBanner.classList.add('hide');
+    }
 });
 
 notificationDiv.addEventListener('click', (e) => {
     const element = e.target;
     if (element.classList.contains('notifications-banner-close')) {
-        notificationDiv.style.display = 'none';
-    };
+        notificationBanner.classList.add('hide');
+    }
+});
+
+notificationDiv.addEventListener('click', (e) => {
+    const element = e.target;
+    if (element.classList.contains('dismiss-notification')) {
+        element.parentNode.classList.add('hide');
+    }
 });
 
 // =================================================

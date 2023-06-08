@@ -166,13 +166,25 @@ h2 {
         flex-direction: row;
         padding: 10px 20px 15px;
     }
-    
-    #notifications-title {
-        margin-bottom: 10px;
+
+    .notifications-text {
+        width: 100%;
     }
     
+    .notification-div {
+        margin: 20px 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     #bell-icon:hover {
         fill: yellow;
+    }
+
+    .hide {
+        display: none;
     }
 
 /*  =================================================
@@ -459,7 +471,7 @@ form {
     .main-header,
     .alert,
     .alert-banner,
-    .notifications,
+    .notification,
     .notifications-banner,
     .traffic,
     .social-stats,
