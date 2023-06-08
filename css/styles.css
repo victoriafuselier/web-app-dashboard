@@ -33,7 +33,7 @@ main {
 }
 
 .widget-container-full, .widget-container-half {
-    width: 90vw;
+    width: 85vw;
     display: flex;
     margin: 10px auto;
     align-items: center;
