@@ -7,7 +7,7 @@ const alertBanner = document.getElementById('alert');
 alertBanner.innerHTML = `
     <div class='alert-banner'>
         <p class='alert-banner-close'>x</p>
-        <p class='alert-banner-msg'><strong>Alert:</strong> You have <strong>6</strong> unread messages</p>
+        <p class='alert-banner-msg'><strong>Alert:</strong> App will be unavailable Sunday 6/11/23 12:00 AM - 6:00 AM for maintenance.</p>
     </div>
 `;
 
