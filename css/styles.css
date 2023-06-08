@@ -436,6 +436,18 @@ form {
     align-items: flex-start;
 }
 
+.switch-light input ~ span > span + span {
+    display: none;
+}
+
+.switch-light input:checked ~ span > span + span {
+    display: inline-block;
+}
+
+.switch-text {
+    color: white;
+}
+
 /*  =================================================
                 AUTOCOMPLETE STYLING
     =================================================   */

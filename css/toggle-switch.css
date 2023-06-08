@@ -471,7 +471,6 @@
   }
   .switch-material.switch-light span span {
     position: absolute;
-    clip: rect(0 0 0 0);
   }
   .switch-material.switch-light input:checked ~ span a {
     right: 0;
