@@ -170,6 +170,10 @@ h2 {
     .notifications-text {
         width: 100%;
     }
+
+    .notif-ind-text {
+        width: 70%;
+    }
     
     .notification-div {
         margin: 20px 0px;
