@@ -134,7 +134,7 @@
   }
   .switch-light a {
     position: absolute;
-    right: 50%;
+    right: 65%;
     top: 0;
     z-index: 1;
     display: block;
@@ -319,7 +319,7 @@
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   }
   .switch-candy a {
-    border: 1px solid #333;
+    border: .5px solid lightgrey;
     border-radius: 3px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.45);
     background-color: #70c66b;
@@ -443,9 +443,9 @@
     opacity: 1;
   }
   .switch-light.switch-material a {
-    top: -0.1875em;
-    width: 1.75em;
-    height: 1.75em;
+    top: 0.2em;
+    width: 1em;
+    height: 1em;
     border-radius: 50%;
     background: #fafafa;
     box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.14), 0 0.1875em 0.125em -0.125em rgba(0, 0, 0, 0.2), 0 0.125em 0.25em 0 rgba(0, 0, 0, 0.12);
@@ -463,7 +463,7 @@
     overflow: visible;
     position: relative;
     top: 0.1875em;
-    width: 3.25em;
+    width: 3.5em;
     height: 1.5em;
     min-height: auto;
     border-radius: 1em;
@@ -473,8 +473,8 @@
     position: absolute;
   }
   .switch-material.switch-light input:checked ~ span a {
-    right: 0;
-    background: #3f51b5;
+    right: .25rem;
+    background: white;
     box-shadow: 0 0.1875em 0.25em 0 rgba(0, 0, 0, 0.14), 0 0.1875em 0.1875em -0.125em rgba(0, 0, 0, 0.2), 0 0.0625em 0.375em 0 rgba(0, 0, 0, 0.12);
   }
   .switch-material.switch-light input:checked ~ span {

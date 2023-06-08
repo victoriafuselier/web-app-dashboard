@@ -444,8 +444,11 @@ form {
     display: inline-block;
 }
 
-.switch-text {
+#switch-text {
     color: white;
+    bottom: -4px;
+    font-size: .75rem;
+    left: 4px;
 }
 
 /*  =================================================
