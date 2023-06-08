@@ -81,6 +81,12 @@ h1 strong {
 #bell-icon {
     fill: white;
     height: 20px;
+    transition: all .5s ease-in-out;
+}
+
+#bell-icon:hover {
+    transform: scale(1.3);
+    fill: yellow;
 }
 
 #bell-div {
@@ -181,10 +187,6 @@ h2 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }
-
-    #bell-icon:hover {
-        fill: yellow;
     }
 
     .hide {
