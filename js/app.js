@@ -25,10 +25,13 @@ alertBanner.addEventListener('click', (e) => {
 const notificationsBell = document.getElementById('bell-icon');
 const notificationDiv = document.getElementById('notification');
 const notificationBanner = document.querySelector('.notifications-banner');
+const notificationBadge = document.querySelector('.badge');
+const notificationBellDiv = document.querySelector('#bell-div');
 
 notificationsBell.addEventListener('click', () => {
     if (notificationBanner.classList.contains('hide')) {
         notificationBanner.classList.remove('hide');
+        notificationBellDiv.removeChild(notificationBadge);
     } else {
         notificationBanner.classList.add('hide');
     }
